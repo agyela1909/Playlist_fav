@@ -1,0 +1,53 @@
+<html>
+<body bgcolor="#FFF0F5">
+    <CENTER>
+        <h1> PLAYLIST FAVORITAS </h1>
+        <br><br><br><br>
+        <a href="vos1.html">
+        <img src="jesse y joy.jpg" width="300" height="300">
+        </a>
+        <h2> JESSI & JOY </h2>
+        <br><br>
+        <a href="vos2.html".html>
+        <img src="jenni.jpg" width="300" height="300">
+        </a>
+        <h2> JENNI RIVERA </h2>
+        <br><br>
+        <a href="vos3.html">
+        <img src="camila.jpg" width="300" height="300">
+        </a>
+        <h2> CAMILA </h2>
+        <br><br>
+        <a href="vos4.html">
+        <img src="nanpa.jpg" width="300" height="300">
+        </a>
+        <h2> NANPA BASICO </h2>
+        <br><br>
+        <a href="vos5.html">
+        <img src="alfredito.jpg" width="300" height="300">
+        </a>
+        <h2> ALFREDO OLIVAS </h2>
+                <audio id="fondo" src="fondo.mp3" loop hidden></audio>
+    <script>
+        const audio = document.getElementById('fondo');
+        let reproducido = false;
+
+        function activarAudio() {
+            if(!reproducido) {
+                audio.play().then(() => {
+                    reproducido = true;
+                }).catch(err => {
+                    console.log("autoplay blokeado:", err);
+                });
+            }
+        }
+
+        window.addEventListener('scroll', activarAudio);
+        window.addEventListener('wheel', activarAudio);
+        window.addEventListener('click', activarAudio);
+        window.addEventListener('keydown', activarAudio);
+        window.addEventListener('touchstart', activarAudio);
+    </script>
+    </CENTER>
+</body>
+</html>
